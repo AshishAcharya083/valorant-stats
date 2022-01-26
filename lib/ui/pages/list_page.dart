@@ -7,6 +7,13 @@ class ListPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        leading: IconButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            icon: Icon(Icons.backpack)),
+      ),
       backgroundColor: Colors.pinkAccent,
       body: Center(
         child: InkWell(

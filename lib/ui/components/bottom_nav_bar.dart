@@ -16,6 +16,7 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
   int selectedIndex = 0;
   @override
   Widget build(BuildContext context) {
+    print("Custom Bottm Nav Bar");
     return SnakeNavigationBar.color(
       // behaviour: snakeBarStyle,
       // snakeShape: snakeShape,

@@ -12,7 +12,7 @@ class HomePage extends StatelessWidget {
       body: Center(
         child: InkWell(
           onTap: () {
-            Navigator.pushNamed(context, routing_constants.listPage);
+            Navigator.pushNamed(context, routing_constants.insideHomePage);
           },
           child: const Text(
             "Homepage",

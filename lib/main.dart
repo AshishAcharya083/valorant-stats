@@ -16,10 +16,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    print("Material APP");
     return const MaterialApp(
       // initialRoute: routing_constants.homePage,
       onGenerateRoute: router.RouteManager.generateRoute,
-      home: HomePage(),
+      home: App(),
     );
   }
 }
