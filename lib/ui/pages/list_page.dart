@@ -1,13 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:valo_stats/routes/routing_constants.dart';
 
 class ListPage extends StatelessWidget {
   const ListPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
+      backgroundColor: Colors.pinkAccent,
       body: Center(
-        child: Text('List Page'),
+        child: InkWell(
+            onTap: () {
+              Navigator.pushNamed(context, homePage);
+            },
+            child: const Text('List Page')),
       ),
     );
   }
