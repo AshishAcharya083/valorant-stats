@@ -4,6 +4,7 @@ import 'package:valo_stats/ui/components/Bottom%20Navigation%20Bar/tab_navigatio
 import 'package:valo_stats/ui/pages/home_page.dart';
 import 'package:valo_stats/ui/pages/inside_home_page.dart';
 import 'package:valo_stats/ui/pages/list_page.dart';
+import 'package:valo_stats/utils/constants.dart';
 
 class App extends StatefulWidget {
   const App({Key? key}) : super(key: key);
@@ -53,6 +54,7 @@ class _AppState extends State<App> {
         //return Future.value(false);
       },
       child: Scaffold(
+        backgroundColor: kPrimaryBlueGrayColor,
         body: Stack(
           children: <Widget>[
             _buildOffstageNavigator("HomePage"),
