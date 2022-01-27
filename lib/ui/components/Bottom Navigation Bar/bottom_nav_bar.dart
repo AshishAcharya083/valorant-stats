@@ -31,9 +31,6 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
       padding: EdgeInsets.all(10),
       shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.all(Radius.circular(2))),
-      // shape: ShapeBorder(
-      //
-      // ),
 
       ///configuration for SnakeNavigationBar.color
       snakeViewColor: Colors.red.shade400,
@@ -59,16 +56,13 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
         widget.onSelectCallBack!(index);
       },
       items: const [
+        BottomNavigationBarItem(icon: Icon(Icons.home_outlined), label: 'home'),
         BottomNavigationBarItem(
-            icon: Icon(Icons.notifications), label: 'tickets'),
-        BottomNavigationBarItem(
-          icon: Icon(Icons.arrow_back),
-          label: 'calendar',
+          icon: Icon(Icons.leaderboard_outlined),
+          label: 'leaderboard',
         ),
-        BottomNavigationBarItem(icon: Icon(Icons.close), label: 'home'),
-        BottomNavigationBarItem(icon: Icon(Icons.update), label: 'microphone'),
         BottomNavigationBarItem(
-            icon: Icon(Icons.home_outlined), label: 'search')
+            icon: Icon(Icons.account_circle_outlined), label: 'microphone'),
       ],
     );
   }

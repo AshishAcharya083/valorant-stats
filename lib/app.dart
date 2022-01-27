@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:valo_stats/ui/components/Bottom%20Navigation%20Bar/bottom_nav_bar.dart';
 import 'package:valo_stats/ui/components/Bottom%20Navigation%20Bar/tab_navigatior.dart';
-import 'package:valo_stats/ui/pages/home_page.dart';
+import 'package:valo_stats/ui/pages/drawer.dart';
+import 'package:valo_stats/ui/pages/home/home_page.dart';
 import 'package:valo_stats/ui/pages/inside_home_page.dart';
 import 'package:valo_stats/ui/pages/list_page.dart';
 import 'package:valo_stats/utils/constants.dart';
@@ -54,12 +55,41 @@ class _AppState extends State<App> {
         //return Future.value(false);
       },
       child: Scaffold(
+        drawer: MyDrawer(
+          cxt: context,
+        ),
+        appBar: AppBar(
+          automaticallyImplyLeading: false,
+          backgroundColor: Colors.transparent,
+          elevation: 0,
+          title: Row(
+            children: [
+              Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  color: kLightGrayColor,
+                ),
+                child: Builder(builder: (context) {
+                  return IconButton(
+                    padding: EdgeInsets.zero,
+                    iconSize: 24,
+                    onPressed: () {
+                      print("on pressed tapped");
+                      Scaffold.of(context).openDrawer();
+                    },
+                    icon: Icon(Icons.menu),
+                  );
+                }),
+              )
+            ],
+          ),
+        ),
         backgroundColor: kPrimaryBlueGrayColor,
         body: Stack(
           children: <Widget>[
             _buildOffstageNavigator("HomePage"),
-            _buildOffstageNavigator("InsideHomePage"),
-            _buildOffstageNavigator("ThirdPage"),
+            _buildOffstageNavigator("Leaderboard"),
+            _buildOffstageNavigator("Profile"),
           ],
         ),
         bottomNavigationBar:

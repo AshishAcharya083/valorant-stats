@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:valo_stats/ui/pages/home_page.dart';
+import 'package:valo_stats/ui/pages/home/home_page.dart';
 
 class ListPage extends StatelessWidget {
   const ListPage({Key? key}) : super(key: key);

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:valo_stats/ui/pages/home_page.dart';
+import 'package:valo_stats/ui/pages/home/home_page.dart';
 import 'package:valo_stats/ui/pages/inside_home_page.dart';
 import 'package:valo_stats/ui/pages/third_page.dart';
 
@@ -13,9 +13,9 @@ class TabNavigator extends StatelessWidget {
     Widget? child;
     if (tabItem == "HomePage") {
       child = HomePage();
-    } else if (tabItem == "InsideHomePage") {
+    } else if (tabItem == "Leaderboard") {
       child = InsideHomePage();
-    } else if (tabItem == "ThirdPage") {
+    } else if (tabItem == "Profile") {
       child = ThirdPage();
     }
 
