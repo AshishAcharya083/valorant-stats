@@ -21,8 +21,8 @@ class _AppState extends State<App> {
       body: IndexedStack(
         index: currentBodyIndex,
         children: const [
-          InsideHomePage(),
           HomePage(),
+          InsideHomePage(),
           ListPage(),
         ],
       ),
