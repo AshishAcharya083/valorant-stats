@@ -15,10 +15,7 @@ class _InsideHomePageState extends State<InsideHomePage> {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
-            onPressed: () {
-              Navigator.pop(context);
-            },
-            icon: const Icon(Icons.backpack)),
+            onPressed: () {}, icon: const Icon(Icons.arrow_back_ios)),
       ),
       body: Column(
         children: [
@@ -35,8 +32,8 @@ class _InsideHomePageState extends State<InsideHomePage> {
           Center(
             child: IconButton(
               onPressed: () {
-                Navigator.of(context)
-                    .push(MaterialPageRoute(builder: (context) => ListPage()));
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => ListPage()));
               },
               icon: Icon(Icons.list),
             ),

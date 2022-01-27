@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:valo_stats/routes/router.dart';
-import 'package:valo_stats/routes/routing_constants.dart' as routing_constants;
+
 import 'package:valo_stats/ui/pages/inside_home_page.dart';
+import 'package:valo_stats/ui/pages/third_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -14,9 +14,7 @@ class HomePage extends StatelessWidget {
         child: InkWell(
           onTap: () {
             Navigator.push(
-                context,
-                MaterialPageRoute(
-                    builder: (context) => const InsideHomePage()));
+                context, MaterialPageRoute(builder: (context) => ThirdPage()));
           },
           child: const Text(
             "Homepage",

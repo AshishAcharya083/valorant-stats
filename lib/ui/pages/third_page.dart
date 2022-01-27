@@ -7,8 +7,11 @@ class ThirdPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      body: const Center(
-        child: Text("Third Page"),
+      body: InkWell(
+        onTap: () {},
+        child: const Center(
+          child: Text("Third Page"),
+        ),
       ),
     );
   }
