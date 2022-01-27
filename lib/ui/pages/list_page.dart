@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:valo_stats/routes/routing_constants.dart';
+import 'package:valo_stats/ui/pages/home_page.dart';
 
 class ListPage extends StatelessWidget {
   const ListPage({Key? key}) : super(key: key);
@@ -18,7 +19,10 @@ class ListPage extends StatelessWidget {
       body: Center(
         child: InkWell(
             onTap: () {
-              Navigator.pushNamed(context, homePage);
+              // Navigator.of(context, rootNavigator: true)
+              //     .push(MaterialPageRoute(builder: (context) => HomePage()));
+              Navigator.pushReplacement(
+                  context, MaterialPageRoute(builder: (context) => HomePage()));
             },
             child: const Text('List Page')),
       ),

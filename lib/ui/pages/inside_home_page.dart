@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:valo_stats/ui/pages/list_page.dart';
 
 class InsideHomePage extends StatefulWidget {
   const InsideHomePage({Key? key}) : super(key: key);
@@ -30,7 +31,16 @@ class _InsideHomePageState extends State<InsideHomePage> {
                       tempInt++;
                     });
                   },
-                  icon: const Icon(Icons.add)))
+                  icon: const Icon(Icons.add))),
+          Center(
+            child: IconButton(
+              onPressed: () {
+                Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (context) => ListPage()));
+              },
+              icon: Icon(Icons.list),
+            ),
+          )
         ],
       ),
     );

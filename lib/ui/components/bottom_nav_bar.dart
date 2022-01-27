@@ -43,6 +43,7 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
         setState(() {
           selectedIndex = index;
         });
+        print("Current index is $index");
         widget.onSelectCallBack!(index);
       },
       items: const [
