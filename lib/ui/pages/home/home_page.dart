@@ -18,18 +18,19 @@ class HomePage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text(
-              "Hi, Rupesh Acharya",
+            Text(
+              "Hi, Aayush Acharya",
               style: TextStyle(
                   fontFamily: "Valorant",
-                  color: kLightGrayTextColor,
+                  color: kGreyTextColor,
                   fontWeight: FontWeight.bold,
                   letterSpacing: 0.5,
                   fontSize: 18),
             ),
-            const SizedBox(
-              height: 10,
-            ),
+            // const SizedBox(
+            //   height: 5,
+            // ),
+
             RichText(
               text: TextSpan(
                 children: <TextSpan>[
@@ -38,7 +39,7 @@ class HomePage extends StatelessWidget {
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
                         color: Colors.white,
-                        fontSize: 20),
+                        fontSize: 22),
                   ),
                   TextSpan(
                       text: "VALORANT",
@@ -52,7 +53,30 @@ class HomePage extends StatelessWidget {
                       style: TextStyle(
                           fontWeight: FontWeight.bold,
                           color: Colors.white,
-                          fontSize: 20))
+                          fontSize: 22))
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 15,
+            ),
+            Text(
+              "Your Statistics",
+              style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 18,
+                  color: Colors.white),
+            ),
+
+            Container(
+              child: Column(
+                children: [
+                  Container(
+                    decoration: BoxDecoration(color: kDarkBlueGrayColor),
+                    child: Column(
+                      children: [Text("rian")],
+                    ),
+                  )
                 ],
               ),
             ),

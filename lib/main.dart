@@ -19,7 +19,8 @@ class MyApp extends StatelessWidget {
     print("Material APP");
     return MaterialApp(
       theme: ThemeData(
-          scaffoldBackgroundColor: const MaterialColor(0xFF1F2326, {}),
+          fontFamily: 'OpenSans',
+          scaffoldBackgroundColor: const MaterialColor(0xFF292c31, {}),
           primaryColor: const MaterialColor(0xFFFA4454, {}),
           splashColor: Colors.red.shade400),
       home: App(),
