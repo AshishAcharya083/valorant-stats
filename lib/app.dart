@@ -59,6 +59,7 @@ class _AppState extends State<App> {
           cxt: context,
         ),
         appBar: AppBar(
+          titleSpacing: 15,
           automaticallyImplyLeading: false,
           backgroundColor: Colors.transparent,
           elevation: 0,
@@ -84,7 +85,7 @@ class _AppState extends State<App> {
             ],
           ),
         ),
-        backgroundColor: kPrimaryBlueGrayColor,
+        // backgroundColor: kPrimaryBlueGrayColor,
         body: Stack(
           children: <Widget>[
             _buildOffstageNavigator("HomePage"),

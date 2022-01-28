@@ -19,7 +19,7 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
   Widget build(BuildContext context) {
     print("Custom Bottm Nav Bar");
     return SnakeNavigationBar.color(
-      backgroundColor: kLightBlueGrayColor,
+      backgroundColor: kLightGrayColor,
 
       shadowColor: Colors.black,
       elevation: 5,
@@ -33,8 +33,10 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
           borderRadius: BorderRadius.all(Radius.circular(2))),
 
       ///configuration for SnakeNavigationBar.color
+      // snakeViewColor: kPrimaryPinkColor,
       snakeViewColor: Colors.red.shade400,
-      // selectedItemColor: snakeShape == SnakeShape.indicator ? selectedColor : null,
+      // selectedItemColor: snakeShape == Sna
+      // keShape.indicator ? selectedColor : null,
       unselectedItemColor: Colors.black,
 
       ///configuration for SnakeNavigationBar.gradient
