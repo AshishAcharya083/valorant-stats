@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:valo_stats/core/services/screen_size.dart';
 import 'package:valo_stats/ui/pages/drawer.dart';
 
 import 'package:valo_stats/ui/pages/inside_home_page.dart';
@@ -18,63 +19,78 @@ class HomePage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              "Hi, Aayush Acharya",
-              style: TextStyle(
-                  fontFamily: "Valorant",
-                  color: kGreyTextColor,
-                  fontWeight: FontWeight.bold,
-                  letterSpacing: 0.5,
-                  fontSize: 18),
-            ),
-            // const SizedBox(
-            //   height: 5,
-            // ),
-
             RichText(
               text: TextSpan(
-                children: <TextSpan>[
+                children: [
                   TextSpan(
-                    text: 'Welcome to ',
+                    text: "Hi, ",
                     style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white,
-                        fontSize: 22),
+                      fontSize: 18,
+                      color: kGreyTextColor,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                   TextSpan(
-                      text: "VALORANT",
-                      style: TextStyle(
-                          fontSize: 24,
-                          fontFamily: "Valorant",
-                          fontWeight: FontWeight.bold,
-                          color: Colors.red.shade400)),
-                  TextSpan(
-                      text: " Stats",
-                      style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white,
-                          fontSize: 22))
+                    text: "Ashish Acharya",
+                    style: TextStyle(
+                        fontFamily: "Valorant",
+                        color: Colors.red.shade400,
+                        fontWeight: FontWeight.bold,
+                        letterSpacing: 0.5,
+                        fontSize: 18),
+                  ),
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 15,
             ),
-            Text(
+            const Text(
               "Your Statistics",
               style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 18,
+                  fontWeight: FontWeight.w900,
+                  fontSize: 24,
                   color: Colors.white),
             ),
-
             Container(
+              /// large container of light grey color
+              decoration: BoxDecoration(color: kLightGrayColor),
+              width: ScreenSize.getScreenWidth(context),
+              padding: EdgeInsets.all(20),
               child: Column(
                 children: [
                   Container(
+                    /// container of dark blue color containg name of the player
+                    padding: EdgeInsets.all(20),
                     decoration: BoxDecoration(color: kDarkBlueGrayColor),
                     child: Column(
-                      children: [Text("rian")],
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        RichText(
+                          text: TextSpan(
+                            children: [
+                              TextSpan(
+                                text: "rian",
+                                style: TextStyle(
+                                  fontSize: 24,
+                                  fontWeight: FontWeight.w700,
+                                  color: Colors.white,
+                                ),
+                              ),
+                              TextSpan(
+                                text: " #ninho",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w500,
+                                  fontSize: 24,
+                                  letterSpacing: 1.2,
+                                  color: kGreyTextColor,
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                        Text("rian")
+                      ],
                     ),
                   )
                 ],
