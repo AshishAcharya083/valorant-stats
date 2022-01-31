@@ -80,16 +80,38 @@ class HomePage extends StatelessWidget {
                               TextSpan(
                                 text: " #ninho",
                                 style: TextStyle(
-                                  fontWeight: FontWeight.w500,
+                                  fontWeight: FontWeight.w300,
                                   fontSize: 24,
                                   letterSpacing: 1.2,
                                   color: kGreyTextColor,
                                 ),
-                              )
+                              ),
                             ],
                           ),
                         ),
-                        Text("rian")
+
+                        /// rank icon and rating kd win rate
+                        Row(
+                          children: [
+                            Expanded(
+                              child: Image(
+                                height: 100,
+                                width: 100,
+                                image: AssetImage("images/rank/gold1.png"),
+                              ),
+                            ),
+                            Expanded(
+                              child: Column(
+                                children: [
+                                  RichText(
+                                    text: TextSpan(text: "Rating "),
+                                  )
+                                ],
+                              ),
+                            )
+                            // Image.asset('images/rank_icon/diamond1.png'),
+                          ],
+                        )
                       ],
                     ),
                   )
