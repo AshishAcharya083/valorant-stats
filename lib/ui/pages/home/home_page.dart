@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:valo_stats/core/services/screen_size.dart';
 import 'package:valo_stats/ui/components/grey_white_text_comp.dart';
+import 'package:valo_stats/ui/components/large_text.dart';
 import 'package:valo_stats/ui/pages/drawer.dart';
 
 import 'package:valo_stats/ui/pages/inside_home_page.dart';
@@ -49,12 +50,9 @@ class HomePage extends StatelessWidget {
               const SizedBox(
                 height: 15,
               ),
-              const Text(
+              Text(
                 "Your Statistics",
-                style: TextStyle(
-                    fontWeight: FontWeight.w900,
-                    fontSize: 24,
-                    color: Colors.white),
+                style: kExtraBoldTextStyle,
               ),
               Container(
                 /// large container of light grey color
@@ -131,6 +129,9 @@ class HomePage extends StatelessWidget {
                           ),
                         ],
                       ),
+                    ),
+                    Row(
+                      children: [LargeTexts(), LargeTexts()],
                     )
                   ],
                 ),
