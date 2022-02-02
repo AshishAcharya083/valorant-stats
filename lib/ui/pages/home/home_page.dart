@@ -54,6 +54,9 @@ class HomePage extends StatelessWidget {
                 "Your Statistics",
                 style: kExtraBoldTextStyle,
               ),
+              const SizedBox(
+                height: 15,
+              ),
               Container(
                 /// large container of light grey color
                 decoration: BoxDecoration(color: kLightGrayColor),
@@ -61,15 +64,15 @@ class HomePage extends StatelessWidget {
                 padding: EdgeInsets.all(20),
                 child: Column(
                   children: [
+                    /// container of dark blue color containg name of the player
                     Container(
-                      /// container of dark blue color containg name of the player
-                      padding: EdgeInsets.all(20),
-                      height: ScreenSize.getScreenHeight(context) * 0.3,
+                      padding: EdgeInsets.symmetric(horizontal: 20),
+                      height: ScreenSize.getScreenHeight(context) * 0.4,
                       decoration: BoxDecoration(
                         color: kDarkBlueGrayColor,
                       ),
                       child: Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           RichText(
@@ -120,6 +123,8 @@ class HomePage extends StatelessWidget {
                               // Image.asset('images/rank_icon/diamond1.png'),
                             ],
                           ),
+
+                          /// play time and no. of matches
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
@@ -127,12 +132,18 @@ class HomePage extends StatelessWidget {
                               GreyWhiteTextComponent("Matches", "423"),
                             ],
                           ),
+
+                          /// rank ratings and rating needed to promotion
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              LargeTexts("26", "Rank \nRating"),
+                              LargeTexts("76", "Rating Needed \nto Promotion")
+                            ],
+                          )
                         ],
                       ),
                     ),
-                    Row(
-                      children: [LargeTexts(), LargeTexts()],
-                    )
                   ],
                 ),
               ),

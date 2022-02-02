@@ -2,20 +2,31 @@ import 'package:flutter/material.dart';
 import 'package:valo_stats/utils/text_styles.dart';
 
 class LargeTexts extends StatelessWidget {
-  const LargeTexts({Key? key}) : super(key: key);
+  final String number;
+  final String text;
+
+  LargeTexts(this.number, this.text);
 
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
         Text(
-          "26",
+          number,
           style: TextStyle(
-              fontWeight: FontWeight.w900, fontSize: 34, color: Colors.white),
+              // height: 2,
+              fontWeight: FontWeight.w900,
+              fontSize: 40,
+              color: Colors.white),
+        ),
+        const SizedBox(
+          width: 5,
         ),
         Text(
-          "Rank \n Rating",
-          style: kSmallGreyTextStyle,
+          text,
+          style: kSmallGreyTextStyle.copyWith(
+            height: 1,
+          ),
         )
       ],
     );
