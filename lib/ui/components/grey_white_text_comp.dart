@@ -11,12 +11,16 @@ class GreyWhiteTextComponent extends StatelessWidget {
     return RichText(
       textAlign: TextAlign.right,
       text: TextSpan(
+        style: TextStyle(fontFamily: "OpenSans"),
         children: [
-          TextSpan(text: "${this.greyText}  ", style: kSmallGreyTextStyle),
+          TextSpan(
+            text: "${this.greyText}  ",
+            style: kSmallGreyTextStyle,
+          ),
           TextSpan(
             text: "${this.whiteText!.toUpperCase()} ",
             style: TextStyle(
-                color: Colors.white, fontWeight: FontWeight.w500, fontSize: 16),
+                color: Colors.white, fontWeight: FontWeight.w600, fontSize: 16),
           )
         ],
       ),
