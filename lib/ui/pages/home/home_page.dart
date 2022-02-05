@@ -52,7 +52,7 @@ class HomePage extends StatelessWidget {
                 height: 15,
               ),
               Text(
-                "Your Statistics gg ",
+                "Your Statistics",
                 style: kExtraBoldTextStyle,
               ),
               const SizedBox(
@@ -61,14 +61,17 @@ class HomePage extends StatelessWidget {
               Stack(
                 children: [
                   Positioned(
-                      right: -100,
-                      bottom: -100,
-                      child: Image(
-                        image: AssetImage("images/rank/platinum1.png"),
-                      )),
+                    right: -100,
+                    bottom: -100,
+                    child: Image(
+                      image: AssetImage("images/rank/platinum1.png"),
+                    ),
+                  ),
                   Container(
                     /// large container of light grey color
-                    decoration: BoxDecoration(color: kLightGrayColor),
+                    decoration: BoxDecoration(
+                        color: kLightGrayColor,
+                        borderRadius: BorderRadius.circular(10)),
                     width: ScreenSize.getScreenWidth(context),
                     padding: EdgeInsets.all(20),
                     child: Column(
@@ -89,11 +92,7 @@ class HomePage extends StatelessWidget {
                                   children: [
                                     TextSpan(
                                       text: "rian",
-                                      style: TextStyle(
-                                        fontSize: 24,
-                                        fontWeight: FontWeight.w700,
-                                        color: Colors.white,
-                                      ),
+                                      style: kMediumTitleTextStyle,
                                     ),
                                     TextSpan(
                                       text: " #ninho",
@@ -199,6 +198,156 @@ class HomePage extends StatelessWidget {
                   ),
                 ],
               ),
+              SizedBox(
+                height: ScreenSize.getScreenHeight(context) * 0.02,
+              ),
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Expanded(
+                    flex: 2,
+                    child: Column(
+                      children: [
+                        /// Accuracy box container
+                        Container(
+                          padding: EdgeInsets.all(10),
+                          decoration: BoxDecoration(
+                            color: kLightGrayColor,
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                "Accuracy",
+                                style: kMediumTitleTextStyle,
+                              ),
+                              Row(
+                                mainAxisSize: MainAxisSize.min,
+                                children: [
+                                  /// image of dummy showing bullet damage
+                                  Expanded(
+                                    child: Image(
+                                      image: AssetImage(
+                                        'images/rank/immortal1.png',
+                                      ),
+                                      height: 100,
+                                    ),
+                                  ),
+                                  Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      GreyWhiteTextComponent('Head', "11.5%"),
+                                      GreyWhiteTextComponent('Body', "84%"),
+                                      GreyWhiteTextComponent('Legs', "6.5%"),
+                                    ],
+                                  ),
+                                  SizedBox(
+                                    width: ScreenSize.getScreenWidth(context) *
+                                        0.03,
+                                  ),
+                                  Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      GreyWhiteTextComponent('Hits', "115"),
+                                      GreyWhiteTextComponent('Hits', "84"),
+                                      GreyWhiteTextComponent('Hits', "65"),
+                                    ],
+                                  ),
+                                ],
+                              )
+                            ],
+                          ),
+                        ),
+                        SizedBox(
+                          height: ScreenSize.getScreenHeight(context) * 0.02,
+                        ),
+
+                        /// Best weapon container
+                        Container(
+                          padding: EdgeInsets.all(10),
+                          decoration: BoxDecoration(
+                            color: kLightGrayColor,
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                "Accuracy",
+                                style: kMediumTitleTextStyle,
+                              ),
+                              Row(
+                                mainAxisSize: MainAxisSize.min,
+                                children: [
+                                  /// image of dummy showing bullet damage
+                                  Expanded(
+                                    child: Image(
+                                      image: AssetImage(
+                                        'images/rank/immortal1.png',
+                                      ),
+                                      height: 100,
+                                    ),
+                                  ),
+                                  Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      GreyWhiteTextComponent('Head', "11.5%"),
+                                      GreyWhiteTextComponent('Body', "84%"),
+                                      GreyWhiteTextComponent('Legs', "6.5%"),
+                                    ],
+                                  ),
+                                  SizedBox(
+                                    width: ScreenSize.getScreenWidth(context) *
+                                        0.03,
+                                  ),
+                                  Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      GreyWhiteTextComponent('Hits', "115"),
+                                      GreyWhiteTextComponent('Hits', "84"),
+                                      GreyWhiteTextComponent('Hits', "65"),
+                                    ],
+                                  ),
+                                ],
+                              )
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  SizedBox(
+                    width: ScreenSize.getScreenWidth(context) * 0.02,
+                  ),
+
+                  /// Best Agent container
+                  Expanded(
+                    child: Container(
+                      padding: const EdgeInsets.all(10),
+                      decoration: BoxDecoration(
+                        color: kLightGrayColor,
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: Column(
+                        children: [
+                          Text(
+                            "Best Agents",
+                            style: kMediumTitleTextStyle,
+                          ),
+                          Image(
+                            image: AssetImage("images/picon/Astra.png"),
+                          )
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
+              )
             ],
           ),
         ),

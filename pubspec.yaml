@@ -41,6 +41,7 @@ flutter:
   uses-material-design: true
   assets:
     - images/rank/
+    - images/picon/
   fonts:
     - family: Valorant
       fonts:

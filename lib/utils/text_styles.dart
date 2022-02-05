@@ -14,3 +14,9 @@ TextStyle kExtraBoldTextStyle =
 
 TextStyle kMediumWhiteTextStyle =
     TextStyle(color: Colors.white, fontWeight: FontWeight.w600, fontSize: 16);
+
+TextStyle kMediumTitleTextStyle = TextStyle(
+  fontSize: 24,
+  fontWeight: FontWeight.w700,
+  color: Colors.white,
+);
