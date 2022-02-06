@@ -229,7 +229,7 @@ class HomePage extends StatelessWidget {
                                   Expanded(
                                     child: Image(
                                       image: AssetImage(
-                                        'images/rank/immortal1.png',
+                                        'images/dummy/dummy_head.png',
                                       ),
                                       height: 100,
                                     ),
@@ -286,7 +286,7 @@ class HomePage extends StatelessWidget {
                                   Expanded(
                                     child: Image(
                                       image: AssetImage(
-                                        'images/rank/immortal1.png',
+                                        'images/dummy/dummy_body.png',
                                       ),
                                       height: 100,
                                     ),
@@ -339,9 +339,19 @@ class HomePage extends StatelessWidget {
                             "Best Agents",
                             style: kMediumTitleTextStyle,
                           ),
-                          Image(
-                            image: AssetImage("images/picon/Astra.png"),
-                          )
+                          SizedBox(
+                            height: ScreenSize.getScreenHeight(context) * 0.01,
+                          ),
+                          Stack(
+                            alignment: Alignment.topRight,
+                            children: [
+                              Image(
+                                image:
+                                    AssetImage("images/picon/Astra_icon.png"),
+                              ),
+                              GreyWhiteTextComponent("Win Rate\n", "53.9%"),
+                            ],
+                          ),
                         ],
                       ),
                     ),
