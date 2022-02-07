@@ -89,8 +89,8 @@ class _AppState extends State<App> {
         body: Stack(
           children: <Widget>[
             _buildOffstageNavigator("HomePage"),
-            _buildOffstageNavigator("Leaderboard"),
-            _buildOffstageNavigator("Profile"),
+            _buildOffstageNavigator("InsideHomePage"),
+            _buildOffstageNavigator("ThirdPage"),
           ],
         ),
         bottomNavigationBar:

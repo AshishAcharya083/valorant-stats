@@ -13,9 +13,9 @@ class TabNavigator extends StatelessWidget {
     Widget? child;
     if (tabItem == "HomePage") {
       child = HomePage();
-    } else if (tabItem == "Leaderboard") {
+    } else if (tabItem == "InsideHomePage") {
       child = InsideHomePage();
-    } else if (tabItem == "Profile") {
+    } else if (tabItem == "ThirdPage") {
       child = ThirdPage();
     }
 

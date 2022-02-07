@@ -6,8 +6,6 @@ import 'package:valo_stats/ui/components/large_text.dart';
 import 'package:valo_stats/ui/components/title_discription.dart';
 import 'package:valo_stats/ui/pages/drawer.dart';
 
-import 'package:valo_stats/ui/pages/inside_home_page.dart';
-import 'package:valo_stats/ui/pages/third_page.dart';
 import 'package:valo_stats/utils/constants.dart';
 import 'package:valo_stats/utils/text_styles.dart';
 
@@ -16,6 +14,7 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    print("Build of homepage called");
     return Scaffold(
       // backgroundColor: kPrimaryBlueGrayColor,
       body: SingleChildScrollView(
